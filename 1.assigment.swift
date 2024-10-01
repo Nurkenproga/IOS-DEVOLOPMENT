@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 var firstName: String = "Nurken"
 var lastName: String = "Atabay"
