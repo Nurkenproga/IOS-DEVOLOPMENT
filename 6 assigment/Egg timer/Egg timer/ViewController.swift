@@ -30,7 +30,30 @@ class ViewController: UIViewController {
     
     @IBAction func startTimer(_ sender: UIButton) {
         timer.invalidate()
-        let eggType = sender.currentTitle!
+        let eggType: String
+            switch sender.tag {
+            case 1:
+                eggType = "soft"
+            case 2:
+                eggType = "medium"
+            case 3:
+                eggType = "hard"
+            default:
+                eggType = "soft"
+            }
+        
+//        guard let eggType = sender.currentTitle else {
+//            
+//                print("Ошибка: название яйца пустое.")
+//                return
+//            }
+//            
+//            // Проверяем, что eggType существует в eggTime
+//            guard let time = eggTime[eggType] else {
+//                print("Ошибка: \(eggType) не найдено в eggTime.")
+//                return
+//            }
+
         proggressView.progress = 0.0
         secondsPassed = 0
         typeEgg.text = eggType

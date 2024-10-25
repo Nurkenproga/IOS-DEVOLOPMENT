@@ -2,7 +2,7 @@ import SwiftUI
 import AVFoundation
 
 struct ContentView: View {
-    @State private var audioPlayer: AVAudioPlayer?
+    @State var audioPlayer: AVAudioPlayer?  // Используем @State для хранения изменяемого состояния
 
     // Массив цветов для кнопок
     let buttonColors: [Color] = [.red, .orange, .yellow, .green, .blue, .indigo, .purple]
@@ -18,23 +18,24 @@ struct ContentView: View {
                     playSound(soundFile: soundFiles[index])  // Воспроизведение звука по индексу
                 }) {
                     Rectangle()
-                        .fill(buttonColors[index])  //Присваиваем цвет кнопке
+                        .fill(buttonColors[index])  // Присваиваем цвет кнопке
                         .frame(height: 100.0)
                 }
             }
         }
     }
 
-
     func playSound(soundFile: String) {
-        if let soundURL = Bundle.main.url(forResource: soundFile, withExtension: "wav", subdirectory: "Sounds") {  // Папка "Sounds"
+        if let soundURL = Bundle.main.url(forResource: soundFile, withExtension: "wav", subdirectory: "Sounds") {
             print("Sound file found at: \(soundURL)")  // Выводим путь к файлу для проверки
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                audioPlayer?.play()
+                audioPlayer?.play()  // Воспроизведение звука
             } catch {
-                print("Ошибка воспроизведения звука: \(error.localizedDescription)")
+                print("Error loading sound file: \(error)")  // Обработка ошибок
             }
+        } else {
+            print("Sound file not found: \(soundFile).wav")
         }
     }
 }
