@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,104 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Type of egg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4x-qi-W7s">
+                                <rect key="frame" x="46" y="121" width="298" height="73"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mCW-cw-LFf">
+                                <rect key="frame" x="25" y="736" width="336" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soft_egg" translatesAutoresizingMaskIntoConstraints="NO" id="l0E-Sm-mx9">
+                                <rect key="frame" x="16" y="306" width="105" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medium_egg" translatesAutoresizingMaskIntoConstraints="NO" id="FTk-dY-Qe2">
+                                <rect key="frame" x="145" y="306" width="101" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hard_egg" translatesAutoresizingMaskIntoConstraints="NO" id="Ncc-pY-2dG">
+                                <rect key="frame" x="265" y="306" width="103" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PB3-i4-lxT">
+                                <rect key="frame" x="25" y="295" width="96" height="120"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="soft"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDn-9e-XPh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgG-RK-k43">
+                                <rect key="frame" x="153" y="297" width="86" height="115"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="medium"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v0g-44-BcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-1C-kdD">
+                                <rect key="frame" x="273" y="297" width="88" height="120"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="hard"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KpV-Hz-jqa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time to cook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfm-sA-y0X">
+                                <rect key="frame" x="148" y="685" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.79754649015545076" green="0.86078912019729614" blue="0.46459329450527564" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MgG-RK-k43" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="238" id="44U-GY-Whb"/>
+                            <constraint firstItem="xrR-1C-kdD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="273" id="55M-05-Qqy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PB3-i4-lxT" secondAttribute="trailing" constant="272" id="5c5-Be-oWs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vfm-sA-y0X" secondAttribute="bottom" constant="112" id="72g-hA-1tg"/>
+                            <constraint firstItem="vfm-sA-y0X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="626" id="7si-xy-FAM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xrR-1C-kdD" secondAttribute="bottom" constant="401" id="88l-w2-13p"/>
+                            <constraint firstItem="R4x-qi-W7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="Eod-24-f7O"/>
+                            <constraint firstItem="MgG-RK-k43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="Iaa-aK-41F"/>
+                            <constraint firstItem="PB3-i4-lxT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="NJv-mf-fEs"/>
+                            <constraint firstItem="R4x-qi-W7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="Pme-s7-ufB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MgG-RK-k43" secondAttribute="bottom" constant="486.66666666666669" id="Uew-JE-kKu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vfm-sA-y0X" secondAttribute="trailing" constant="150" id="XmQ-z1-SrU"/>
+                            <constraint firstItem="vfm-sA-y0X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="Ynh-4q-pIC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R4x-qi-W7s" secondAttribute="trailing" constant="49" id="Zoy-r1-c5m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R4x-qi-W7s" secondAttribute="bottom" constant="624" id="bZX-vS-Dnl"/>
+                            <constraint firstItem="xrR-1C-kdD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="238" id="bcG-RJ-3es"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xrR-1C-kdD" secondAttribute="trailing" constant="32" id="oZX-NB-Ulm"/>
+                            <constraint firstItem="PB3-i4-lxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qzr-dJ-h7W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MgG-RK-k43" secondAttribute="trailing" constant="154" id="uHM-xa-W0h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PB3-i4-lxT" secondAttribute="bottom" constant="403" id="uQV-Jf-3DZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TypeEgg" destination="R4x-qi-W7s" id="0Hv-HG-sva"/>
+                        <outlet property="proggressView" destination="mCW-cw-LFf" id="jTr-Pc-gDc"/>
+                        <outlet property="timerView" destination="vfm-sA-y0X" id="hxV-4m-MSO"/>
+                        <outlet property="typeEgg" destination="R4x-qi-W7s" id="dHh-yb-ZU3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hard_egg" width="287" height="366"/>
+        <image name="medium_egg" width="288" height="363"/>
+        <image name="soft_egg" width="287" height="365"/>
+    </resources>
 </document>

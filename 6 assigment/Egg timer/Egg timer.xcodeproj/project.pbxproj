@@ -48,16 +48,6 @@
 			path = "Egg timer";
 			sourceTree = "<group>";
 		};
-		4F612E932CC8482E00E342B6 /* Egg timerTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Egg timerTests";
-			sourceTree = "<group>";
-		};
-		4F612E9D2CC8482E00E342B6 /* Egg timerUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Egg timerUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				4F612E7C2CC8482C00E342B6 /* Egg timer */,
-				4F612E932CC8482E00E342B6 /* Egg timerTests */,
-				4F612E9D2CC8482E00E342B6 /* Egg timerUITests */,
 				4F612E7B2CC8482C00E342B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,9 +131,6 @@
 			dependencies = (
 				4F612E922CC8482E00E342B6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				4F612E932CC8482E00E342B6 /* Egg timerTests */,
-			);
 			name = "Egg timerTests";
 			packageProductDependencies = (
 			);
@@ -165,9 +150,6 @@
 			);
 			dependencies = (
 				4F612E9C2CC8482E00E342B6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4F612E9D2CC8482E00E342B6 /* Egg timerUITests */,
 			);
 			name = "Egg timerUITests";
 			packageProductDependencies = (
