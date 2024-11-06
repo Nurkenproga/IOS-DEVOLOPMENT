@@ -48,7 +48,6 @@ class ViewController: UIViewController {
 //                return
 //            }
 //            
-//            // Проверяем, что eggType существует в eggTime
 //            guard let time = eggTime[eggType] else {
 //                print("Ошибка: \(eggType) не найдено в eggTime.")
 //                return
