@@ -4,7 +4,6 @@ class DetailViewController: UIViewController {
     
     var game: Game
     
-    // Инициализатор для передачи данных игры
     init(game: Game) {
         self.game = game
         super.init(nibName: nil, bundle: nil)
@@ -14,7 +13,6 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // UI элементы
     var gameImageView: UIImageView!
     var gameTitleLabel: UILabel!
     var gameDeveloperLabel: UILabel!
@@ -27,7 +25,6 @@ class DetailViewController: UIViewController {
         displayGameDetails()
     }
     
-    // Настроим UI элементы
     func setupUI() {
         gameImageView = UIImageView()
         gameTitleLabel = UILabel()
@@ -47,7 +44,6 @@ class DetailViewController: UIViewController {
         setConstraints()
     }
     
-    // Установим ограничения для UI элементов
     func setConstraints() {
         NSLayoutConstraint.activate([
             gameImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
@@ -66,7 +62,6 @@ class DetailViewController: UIViewController {
         ])
     }
     
-    // Отображение данных игры
     func displayGameDetails() {
         gameImageView.image = game.image
         gameTitleLabel.text = game.title

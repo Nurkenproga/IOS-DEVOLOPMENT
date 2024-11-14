@@ -54,10 +54,10 @@ extension GameList: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedGame = games[indexPath.row] // Выбираем игру из массива
+        let selectedGame = games[indexPath.row]
         
-        let detailVC = DetailViewController(game: selectedGame) // Передаем игру через инициализатор
-        navigationController?.pushViewController(detailVC, animated: true) // Переход на экран с деталями
+        let detailVC = DetailViewController(game: selectedGame)
+        navigationController?.pushViewController(detailVC, animated: true) 
     }
 }
 
