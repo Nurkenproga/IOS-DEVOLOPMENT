@@ -55,7 +55,6 @@ extension GameList: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedGame = games[indexPath.row]
-        
         let detailVC = GameDetails(game: selectedGame)
         navigationController?.pushViewController(detailVC, animated: true) 
     }
@@ -72,7 +71,7 @@ extension GameList {
         let game6 = Game(image: UIImage.starcraft, title: "Starcraft", developer: "Blizzard Entertainment", genre: "Стратегия в реальном времени")
         let game7 = Game(image: UIImage.tf2, title: "Team Fortress 2", developer: "Valve", genre: "Шутер от первого лица")
         let game8 = Game(image: UIImage.cs, title: "Counter-Strike 1.6", developer: "Valve", genre: "Шутер от первого лица")
-        let game9 = Game(image: UIImage.portal, title: "Portal]", developer: "Valve", genre: "Головоломка/Платформер")
+        let game9 = Game(image: UIImage.portal, title: "Portal", developer: "Valve", genre: "Головоломка/Платформер")
                 
         return [game3, game1, game9, game5, game7, game2, game4, game8, game6]
     }

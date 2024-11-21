@@ -72,8 +72,8 @@ class BookDetails: UIViewController {
     func displayBookDetails() {
         bookImageView.image = book.image
         bookTitleLabel.text = book.title
-        bookAuthorLabel.text = "Author: \(book.author)"
-        bookGenreLabel.text = "Genre: \(book.genre)"
-        bookReleaseYearLabel.text = "Year of Release: \(book.releaseYear)" 
+        bookAuthorLabel.text = "Автор: \(book.author)"
+        bookGenreLabel.text = "Жанр: \(book.genre)"
+        bookReleaseYearLabel.text = "Год выхода: \(book.releaseYear)"
     }
 }
